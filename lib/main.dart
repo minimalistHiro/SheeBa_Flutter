@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sheeba/views/content_view.dart';
+import 'package:sheeba/views/bottom_tab _page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'SheeBa',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff8eff77)),
         useMaterial3: true,
       ),
-      home: ContentView(),
+      home: BottomTabPage(),
     );
   }
 }
