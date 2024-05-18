@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sheeba/views/bottom_tab _page.dart';
+import 'package:sheeba/views/entry_pages/entry_page.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Firebase初期化処理
   // await Firebase.initializeApp(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff8eff77)),
         useMaterial3: true,
       ),
-      home: BottomTabPage(),
+      home: EntryPage(),
     );
   }
 }

@@ -1,17 +1,64 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:sheeba/views/account_pages/update_username_page.dart';
-import 'package:sheeba/views/home_pages/menu_bar_pages/money_transfer_page.dart';
-import 'package:sheeba/views/home_pages/menu_bar_pages/qr_code_page.dart';
-import 'package:sheeba/views/home_pages/menu_bar_pages/store_get_point_page.dart';
 
 class AccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shape: CircleBorder(),
-        toolbarHeight: 200,
+        title: Column(
+          children: [
+            // アイコン
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      width: 120,
+                      height: 120,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade300,
+                        border: Border.all(width: 3),
+                      ),
+                    ),
+                    Icon(Icons.person, size: 70,)
+                  ]
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 10),
+              child: Text('広樹',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 20),
+              child: Text('しばID：fdsfdsgwejojsiojdfaf52534151345safaso',
+                style: TextStyle(
+                  fontSize: 13.0,
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(right: 300),
+              child: Text('設定',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0,
+                ),
+              ),
+            ),
+          ],
+        ),
+        toolbarHeight: 250,
       ),
       body: ListView(children: [
         _menuItem('ユーザー名を変更', Colors.black, context, UpdateUsernamePage()),

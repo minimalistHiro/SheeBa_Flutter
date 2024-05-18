@@ -45,5 +45,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>トップ画像の選定に使用します</string>
+	<key>NSCameraUsageDescription</key>
+	<string>QRコードの読み取りに使用します</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>トップ画像の選定に使用します</string>
 </dict>
 </plist>
